@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get("/", function () {
+    $shows = [
+        'Breaking Bad','The Office', 'It`s Always Sunny in Philadelphia'];
 
 
-
-    return view("home");
+    return view("home",['shows'=>$shows]);
 })->name("home");

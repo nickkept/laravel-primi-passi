@@ -15,9 +15,19 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
-    <div class="container"> 
-        <h1 class="text-center"> Welcome to my first Laravel Page </h1>
+<body class="bg-dark">
+    <div class="container text-center"> 
+        <h1 class="text-danger py-4"> Welcome to my first Laravel Page </h1>
+        <h3 class="text-white">
+        These are my favorite shows:
+        </h3>
+        <ul>
+        @foreach ($shows as $element)
+            <li>
+                <a href="/{{ $element }}">{{ $element }}</a>
+            </li>
+        @endforeach
+        </ul>
     </div>
 </body>
 
